@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Misson_Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <h1>Mission to Mars..</h1>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+      </div>
+
+      <div class ='row' id = "mars-latest-news">
+        <div class = col-md-12>
+             <p><h2>Latest Mars News</h2></p>
+             <h3>{{ Mars_data.latest_news_title }}</h3>
+              <h4><p>{{Mars_data.latest_news}}</p></h4>
+        </div>
+      </div>
+
+      <div class = 'row' id = "mars-featured-image-mars-facts">
+        <div class = "col-md-6 col-sm-12">
+            <img src="{{ Mars_data.mars_img}}" width="600" height = "900" alt="Responsive image" class="img-responsive" >
+        </div>
+        <div class = "col-md-4 col-sm-12">
+            <div class = "table">
+              <h4 class = "heading">Mars Facts</h4>
+              <div class="table-responsive">
+              <table class="table table-bordered" >
+                <thead>
+                  <tr>
+                      <td>Description</td>
+                      <td>Mars</td>
+                      <td>Earth</td>
+                  </tr>
+                </thead>
+                {% for facts in Mars_data.mars_facts %}
+                  <tr>
+                    {% for fact in facts %}
+                      <td >
+                      
+                        {{ fact }}
+
+                      </td>
+                      {% endfor %}
+                  </tr>
+                  {% endfor %}
+              </table>
+            </div>
+            </div>
+        </div>
+       </div> 
+
+      <div class = "row" id="mars-hemisphere">
+          <div class = "cols-md-12">
+            <div class="caption" style="text-align:center"><h3><strong>Mars Hemispheres</strong></h3><hr></div>
+            <div class="thumbnail" style="display:inline-block">
+
+              <img  src= "{{ Mars_data.Cerberus_url }} " height = "100" width = "100" alt = "Responsive image" class = "img-responsive">
+              <div class ="caption"style="text-align:center;">
+              <h5><strong>{{Mars_data.Cerberus_title}}<strong></h5>
+              </div>
+            </div>
+
+            <div class="thumbnail" style="display:inline-block">
+              <img  src= "{{ Mars_data.Schiaparelli_url }} " height = "100" width = "100" alt = "Responsive image" class = "img-responsive">
+              <div class ="caption"style="text-align:center;">
+              <h5><strong>{{Mars_data.Schiaparelli_title}}</strong></h5>
+              </div>
+            </div>
+                   
+            <div class="thumbnail" style="display:inline-block">
+              <img  src= "{{ Mars_data.Syrtis_Major_url }} " height = "100" width = "100" alt = "Responsive image" class = "img-responsive">
+              <div class ="caption" style="text-align:center;">
+                <h5><strong>{{Mars_data.Syrtis_Major_title}}</strong></h5>
+              </div>
+            </div>
+
+            <div class="thumbnail" style="display:inline-block">
+              <img  src= "{{ Mars_data.Valles_Marineris_url }} " height = "100" width = "100" alt = "Responsive image" class = "img-responsive">
+              <div class ="caption" style="text-align:center;">
+                <h5><strong>{{Mars_data.Valles_Marineris}}</strong></h5>
+              </div>
+          </div>
+     
+        </div>
+      </div>
+      
+    </div>
+    </div>
+  </body>
+  
+  </html>
+  
