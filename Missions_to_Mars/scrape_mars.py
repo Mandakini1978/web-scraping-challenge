@@ -163,10 +163,10 @@ def scrape():
     {"title": title_list[2], "img_url": img_url3},
     {"title": title_list[3], "img_url": img_url4},
 ]
-    print(img_url1)
-    print(img_url2)
-    print(img_url3)
-    print(img_url4)
+   # print(img_url1)
+   # print(img_url2)
+   # print(img_url3)
+   # print(img_url4)
     
     # Store Mars data in a dictionary
     Mars_data = {

@@ -25,7 +25,7 @@
 
       <div class = 'row' id = "mars-featured-image-mars-facts">
         <div class = "col-md-6 col-sm-12">
-            <img src="{{ Mars_data.mars_img}}" width="600" height = "900" alt="Responsive image" class="img-responsive" >
+            <img src="{{ Mars_data.mars_img}}" width="600" height = "900" alt="Responsive image" class="img-responsive" style="margin-left:150;">
         </div>
         <div class = "col-md-4 col-sm-12">
             <div class = "table">
@@ -55,37 +55,49 @@
             </div>
         </div>
        </div> 
+<!--
+       <figure>
+        <img src="https://picsum.photos/200/50" />
+        <figcaption>This is a caption of slightly longer length. It should wrap, regardless of the size of the image.</figcaption>
+      </figure>  -->
 
       <div class = "row" id="mars-hemisphere">
           <div class = "cols-md-12">
             <div class="caption" style="text-align:center"><h3><strong>Mars Hemispheres</strong></h3><hr></div>
-            <div class="thumbnail" style="display:inline-block">
-
-              <img  src= "{{ Mars_data.Cerberus_url }} " height = "100" width = "100" alt = "Responsive image" class = "img-responsive">
-              <div class ="caption"style="text-align:center;">
-              <h5><strong>{{Mars_data.Cerberus_title}}<strong></h5>
-              </div>
+            <div class="thumbnail" style="display:inline-block;margin-left:150px;height: 300px;width:200px;">
+              <figure>
+              <a target="_blank" href="{{ Mars_data.Cerberus_url }} "><img  src= "{{ Mars_data.Cerberus_url }} " height = "200" width = "200" alt = "Responsive image" class = "img-responsive"></a>
+              <figcaption style="display:table-caption;caption-side:top">
+              <h4><strong>{{Mars_data.Cerberus_title}}</strong></h4>
+              </figcaption>
+              </figure>
             </div>
 
-            <div class="thumbnail" style="display:inline-block">
-              <img  src= "{{ Mars_data.Schiaparelli_url }} " height = "100" width = "100" alt = "Responsive image" class = "img-responsive">
-              <div class ="caption"style="text-align:center;">
-              <h5><strong>{{Mars_data.Schiaparelli_title}}</strong></h5>
-              </div>
+            <div class="thumbnail" style="display:inline-block; margin-left: 100px;height: 300px;width:200px;">
+              <figure>
+              <a target="_blank" href = "{{ Mars_data.Schiaparelli_url }} "><img  src= "{{ Mars_data.Schiaparelli_url }} " height = "200" width = "200" alt = "Responsive image" class = "img-responsive"></a>
+              <figcaption style="display:table-caption;caption-side:top">
+              <h4><strong>{{Mars_data.Schiaparelli_title}}</strong></h4>
+              </figcaption>
+              </figure>
             </div>
                    
-            <div class="thumbnail" style="display:inline-block">
-              <img  src= "{{ Mars_data.Syrtis_Major_url }} " height = "100" width = "100" alt = "Responsive image" class = "img-responsive">
-              <div class ="caption" style="text-align:center;">
-                <h5><strong>{{Mars_data.Syrtis_Major_title}}</strong></h5>
-              </div>
+            <div class="thumbnail" style="display:inline-block;margin-left:100px;height: 300px;width:200px;">
+              <figure>
+              <a target ="_blank" href = "{{ Mars_data.Syrtis_Major_url }} "><img  src= "{{ Mars_data.Syrtis_Major_url }} " height = "200" width = "200" alt = "Responsive image" class = "img-responsive"></a>
+              <figcaption style="display:table-caption;caption-side:top">
+              <h4><strong>{{Mars_data.Syrtis_Major_title}}</strong></h4>
+              </figcaption>
+            </figure>
             </div>
 
-            <div class="thumbnail" style="display:inline-block">
-              <img  src= "{{ Mars_data.Valles_Marineris_url }} " height = "100" width = "100" alt = "Responsive image" class = "img-responsive">
-              <div class ="caption" style="text-align:center;">
-                <h5><strong>{{Mars_data.Valles_Marineris}}</strong></h5>
-              </div>
+            <div class="thumbnail" style="display:inline-block;margin-left:100px;height: 300px;width:200px;">
+              <figure>
+              <a target="_blank" href = "{{ Mars_data.Valles_Marineris_url }} "><img  src= "{{ Mars_data.Valles_Marineris_url }} " height = "200" width = "200" alt = "Responsive image" class = "img-responsive"></a>
+              <figcaption style="display:table-caption;caption-side:top">
+              <h4><strong>{{Mars_data.Valles_Marineris}}</strong></h4>
+              </figcaption>
+            </figure>
           </div>
      
         </div>
